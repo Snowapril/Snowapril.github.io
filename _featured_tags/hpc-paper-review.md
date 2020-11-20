@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
 title: Paper Review
-slug: gpu-programming-paper-review
-category: gpu-programming
+slug: hpc-paper-review
+category: high-performance-computing
 menu: false
 order: 1
 ---

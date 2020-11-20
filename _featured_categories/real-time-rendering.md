@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Real Time Rendering
-slug: Real Time Rendering
+slug: real-time-rendering
 menu: true
 submenu: true
 order: 4

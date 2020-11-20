@@ -1,7 +1,7 @@
 ---
 layout: list
 title: High Performance Computing
-slug: High Performance Computing
+slug: high-performance-computing
 menu: true
 submenu: true
 order: 2

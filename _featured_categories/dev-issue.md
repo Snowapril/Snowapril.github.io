@@ -1,10 +1,10 @@
 ---
 layout: list
 title: Dev Issue
-slug: Dev Issue
+slug: dev-issue
 menu: true
 submenu: true
-order: 8
+order: 9
 description: >
   개발하고 공부하면서 겪은 이슈들에 대한 내용
 ---

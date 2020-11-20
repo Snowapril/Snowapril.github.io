@@ -1,7 +1,7 @@
 ---
 layout: list
 title: GPU Programming
-slug: GPU Programming
+slug: gpu-programming
 menu: true
 submenu: true
 order: 1

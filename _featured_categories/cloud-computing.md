@@ -1,10 +1,10 @@
 ---
 layout: list
-title: CPP
-slug: CPP
+title: Cloud Computing
+slug: cloud-computing
 menu: true
 submenu: true
-order: 5
+order: 11
 description: >
-  C++ 에 대해 공부하고 겪은 일들을 기록
+  Cloud Computing 에 대해 공부하고 겪은 일들을 기록
 ---

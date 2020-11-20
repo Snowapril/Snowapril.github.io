@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
 title: Paper Review
-slug: gpu-programming-paper-review
-category: gpu-programming
+slug: deep-learning-paper-review
+category: deep-learning
 menu: false
 order: 1
 ---
