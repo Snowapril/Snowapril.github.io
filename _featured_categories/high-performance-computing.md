@@ -1,6 +1,6 @@
 ---
 layout: list
-title: High Performance Computing
+title: HPC
 slug: high-performance-computing
 menu: true
 submenu: true
