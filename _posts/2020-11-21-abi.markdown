@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Application Binary Interface"
+date:   2020-11-21 20:38:27 +0900
+categories: vulkan
+tags: vulkan c++ reference ABI
+comments: true  
+---
+
+[reference]: https://lifeisforu.tistory.com/394?category=837815
