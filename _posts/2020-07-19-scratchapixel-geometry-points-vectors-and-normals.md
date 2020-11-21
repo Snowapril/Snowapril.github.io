@@ -34,7 +34,7 @@ $$V = (x, y, z)$$
 
 이때 x, y, z는 실수이다.
 
-![Point And Vector](https://theorydb.github.io/assets/img/post_img/pointandvector.png)  
+![Point And Vector](https://snowapril.github.io/assets/img/post_img/pointandvector.png)  
 
 수학자와 물리학자와 이야기할 때, 그들의**vector**또는**point cloud**(점구름)은 좀 더 일반적인 것임을 기억하라; 그들은 우리가 그것들(**points**,**vectors**)을 사용하는 방법에 제한받지 않는다. 그들에게**vector**는 임의의 또는 무한한 크기를 가진다.
 
@@ -62,7 +62,7 @@ $$P \\rightarrow Translate \\rightarrow P\_T\\ V \\rightarrow Rotate \\rightarro
 
 # Normals
 
-![Normals](https://theorydb.github.io/assets/img/post_img/normal.png) 
+![Normals](https://snowapril.github.io/assets/img/post_img/normal.png) 
 
 **normal**(법선)이란 CG에서 어느 한 표면 위에 있는 특정한 점에서 기하물체를 나타내는 기술적인 용어이다(A normal is the technical term used in Computer Graphics (and Geometry) to describe the orientation of a surface of a geometric object at a point on that surface.). 기술적으로, 점P에서 표면의**surface normal**은 점P에서 표면에 접하는 평면에 대해 수직인**vector**로 볼 수 있다.**Normals**는 물체의 밝기를 계산하는**shading**연산에서 중요한 역할을 한다.
 
