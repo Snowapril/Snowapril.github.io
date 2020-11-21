@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "[Scratchapixel] (Geometry) Points, Vectors and Normals"
+mathjax: true
 date:   2020-07-19 20:38:27 +0900
 categories: real-time-rendering
 tags: C++ CG ComputerGraphics GraphicsProgramming ScratchAPixel 번역 한국어
