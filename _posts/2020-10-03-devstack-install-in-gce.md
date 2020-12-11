@@ -6,7 +6,6 @@ categories: openstack
 tags: devstack openstack single-node undercloud ubuntu googlecloud gce
 comments: true  
 ---
-# Devstack을 이용한 openstack 설치
 
 아래와 같이 Google Cloud에서 4core, 16GB RAM 스펙의 Ubuntu 18.04 VM을 생성했다.
 

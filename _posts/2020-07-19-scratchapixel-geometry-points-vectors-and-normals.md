@@ -7,11 +7,10 @@ categories: real-time-rendering
 tags: C++ CG ComputerGraphics GraphicsProgramming ScratchAPixel 번역 한국어
 comments: true  
 ---
-# \[Geometry\] Points, Vectors and Normals
 
 # **Introduction to Geometry**
 
-**Points**,**Vectors**,**Matrices**그리고**Normals**는 CG에서 문학에서의 알파벳과 같은 것이다; 그래서 대부분의 CG책들은 선형대수학과 기하학에서 시작하는 것이 대다수이다. 그러나 그래픽스 프로그래밍을 배우고자 하는 많은 이들에게 이미지 하나 띄우는데 수많은 수학 이론을 들이미는 것은 꽤나 화가 치밀 것이다. 당신이 수학이 불편하거나**matrix**가 뭔지 모른다고 CG 프로그래밍은 내것이 아니라고 생각한다면, 아직 포기하지마라.
+**Points**, **Vectors**, **Matrices** 그리고 **Normals**는 CG에서 문학에서의 알파벳과 같은 것이다; 그래서 대부분의 CG책들은 선형대수학과 기하학에서 시작하는 것이 대다수이다. 그러나 그래픽스 프로그래밍을 배우고자 하는 많은 이들에게 이미지 하나 띄우는데 수많은 수학 이론을 들이미는 것은 꽤나 화가 치밀 것이다. 당신이 수학이 불편하거나**matrix**가 뭔지 모른다고 CG 프로그래밍은 내것이 아니라고 생각한다면, 아직 포기하지마라.
 
 우리는 선형대수학에 대한 사전지식이 필요없는 몇몇 강의들로 "Foundation of 3D Rendering"을 시작했다. 이는 CG 프로그래밍을 가르치는 통상적인 방법은 아니지만, 뭔가 실용적이고 재미난 것으로 시작하는 것이 좀더 입문하는데 흥미로울 것이라 믿는다: 예를들어, 초반에 나오는**Ray-tracer**는 수학과 프로그래밍에 대한 지식을 아주 조금만 필요로한다.**Renderer**를 작성하는 것은, 당신이 수학과 같은 것들이 특정한 결과를 도출하는데 어떻게 사용되는지 점진적으로 관찰할 수 있으므로 더 흥미롭고 보람찬 일일 것이다. 다시 말하지만,**Points**,**Vectors**그리고**Matrices**는 CG 이미지들을 만드는 과정에서 필수적이다; 매 강의마다 그것들을 꽤나 광범위하게 사용하게 될 것이다.
 

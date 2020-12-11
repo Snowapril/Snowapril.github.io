@@ -6,7 +6,6 @@ categories: openstack
 tags: devstack openstack single-node undercloud ubuntu googlecloud gce cinder
 comments: true  
 ---
-# OpenStack cinder.volume down 해결
 
 User VM 생성 테스트를 하던 도중, instance 생성중에 Volume 생성에서 error가 발생했다.
 

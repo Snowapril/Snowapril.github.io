@@ -36,9 +36,6 @@ stackoverflow에서 이 오류메시지는 컴파일러 내부의 오류로, 버
 
 [bug report page](https://developercommunity.visualstudio.com/content/problem/517958/fatal-error-c1001-when-i-define-constexpr-construc.html)
 
-fatal error c1001 : When I define constexpr constructor with variadic template parameter - Developer Community
-Sign in Visual Studio Visual Studio for Mac .NET C++ Azure DevOps Azure DevOps Server (TFS) Topics Problems Problems Features Features Users Badges
-developercommunity.visualstudio.com
 3일간 댓글이 달리지않길래, 내가 이상하게 해놓고 버그리포팅이랍시고 글을 올린걸까 생각했지만
 4일째에 댓글이 달리고, 그후로 clang 컴파일러 버젼을 공유한 후, 6일째에 "A fix for this issue has been internally implemented and is being prepared for release. We'll update you once it becomes available for download." 라는 댓글이 달렸다. 
 
