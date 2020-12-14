@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: CPPCon
-slug: cppcon
-category: cpp
+title: C++
+slug: cpp
+category: language
 menu: false
 order: 1
 ---

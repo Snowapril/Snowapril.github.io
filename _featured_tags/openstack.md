@@ -4,5 +4,5 @@ title: OpenStack
 slug: openstack
 category: cloud-computing
 menu: false
-order: 2
+order: 1
 ---
