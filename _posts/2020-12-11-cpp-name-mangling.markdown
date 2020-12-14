@@ -97,6 +97,10 @@ float dot(const vec3& v1, const vec3& v2);
 언급했듯이 function name이 name mangling 되는 순간은 linking 할 때가 아니고, compile 할 때이므로, header 파일에서만 extern "C"로
 감싸놓는다 해도 source 파일에서 extern "C" 처리를 해놓지 않으면 소용이 없다.
 
+vec_calculation_modified.hpp만 extern "C" 처리를 하고 vec_calculation_modified.cpp 에서는 extern "C" 처리를 하지 않는다면,
+`dot`을 호출하는 C 파일에서는 name mangling 되지 않은 dot의 symbol을 찾는데, dot의 body는 C++ compiler에 의해서 name mangling 되어버리므로
+C 파일에서 호출한 dot은 구현체가 없는 상황이 발생해버린다. 따라서 linker는 error를 뱉어낸다.
+
 ```c++
 //vec_calculation_modified.cpp
 #include <vec.hpp>
@@ -105,10 +109,6 @@ float dot(const vec3& v1, const vec3& v2)
     return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
 }
 ```
-
-vec_calculation_modified.hpp만 extern "C" 처리를 하고 vec_calculation_modified.cpp 에서는 extern "C" 처리를 하지 않는다면,
-`dot`을 호출하는 C 파일에서는 name mangling 되지 않은 dot의 symbol을 찾는데, dot의 body는 C++ compiler에 의해서 name mangling 되어버리므로
-C 파일에서 호출한 dot은 구현체가 없는 상황이 발생해버린다. 따라서 linker는 error를 뱉어낸다.
 
 source 파일에서도 extern "C"를 감싸면 문제가 해결되지만, 이 방법보다도 함수의 선언부가 포함된 header 파일인 vec_calculation_modified.hpp을
 source 파일에서 include 해주면 compiler가 알아서 `dot`의 body도 name mangling 되지 않게 해준다.
