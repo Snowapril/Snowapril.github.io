@@ -40,7 +40,7 @@ function name과 function signature를 이용하여 `addii`와 같은 형식으�
 실제로는 아래 그림과 같이 컴파일러마다 mangling rule이 다르다.
 ![compiler name mangling rules](https://snowapril.github.io/assets/img/post_img/2020-12-11-mangling-rules.jpg)
 
-그렇다면 function overloading가 존재하지 않는 C에서는 name mangling이 필요할까?
+그렇다면 function overloading이 존재하지 않는 C에서는 name mangling이 필요할까?
 C에서는 function overloading이 없으므로 하나의 binary에는 동일한 function name을 가진 구현이 하나만 존재하므로,
 mangled된 function name이 필요하지 않다. 그렇지만 경우에 따라 함수에 대한 추가적인 정보를 제공하기 위해 `_add`, `_add@4`, `@add@4`와 같이
 mangling되기도 하는데 자세한 내용은 이 글의 범위를 벗어나니 생략한다.
@@ -64,7 +64,7 @@ C++에서 정의한 함수를 C에서 쓰려고 하면 linking error가 발생�
 
 extern "C"
 {
-    float dot(const vec3& v1, const vec3& v2);
+    float dot(vec3 v1, vec3 v2);
 }
 
 #endif //end of VEC_CALCULATION_HPP
@@ -85,7 +85,7 @@ extern "C"
 {
 #endif
 
-float dot(const vec3& v1, const vec3& v2);
+float dot(vec3 v1, vec3 v2);
 
 #ifdef __cplusplus
 }
@@ -104,7 +104,7 @@ C 파일에서 호출한 dot은 구현체가 없는 상황이 발생해버린다
 ```c++
 //vec_calculation_modified.cpp
 #include <vec.hpp>
-float dot(const vec3& v1, const vec3& v2)
+float dot(vec3 v1, vec3 v2)
 {
     return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
 }
