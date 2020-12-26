@@ -51,5 +51,4 @@ DLL로 runtime library를 제공하는지 static하게 프로그램에 link하�
 2. [https://diehard98.tistory.com/entry/MSDN-MT-MTd-MD-MDd-C-Runtime-Library-Option](https://diehard98.tistory.com/entry/MSDN-MT-MTd-MD-MDd-C-Runtime-Library-Option)
 3. [https://stackoverflow.com/questions/919267/whats-the-difference-between-mtd-and-mdd-in-code-generation-property-section](https://stackoverflow.com/questions/919267/whats-the-difference-between-mtd-and-mdd-in-code-generation-property-section)
 4. [https://m.blog.naver.com/milennium9/20153887924](https://m.blog.naver.com/milennium9/20153887924)
-5. [https://docs.microsoft.com/ko-kr/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-160](https://docs.microsoft.com/ko-kr/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-160)
-6.
+5. [https://docs.microsoft.com/ko-kr/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-160](https://docs.microsoft.com/ko-kr/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-160) 
