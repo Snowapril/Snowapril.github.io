@@ -26,7 +26,23 @@ real-time에 진짜 물처럼 실감나게 만들 수 있을까를 고민하고 
 Ray tracing은 왜이렇게 느릴까? "Accelerated Ray Tracing" (1983) 후지모토의 말에 따르면, ray tracing method의 speed는 거의 전적으로
 Scene complexity에 달려있다. 
 
+> "The calculation speed of the ray-tracing method is undoubtedly one of the basic problems that must be dealt with. Why is raytracing so computationally expensive? The main cause was clearly identified at the very moment ray tracing first entered the field of computer graphics. According to Whitted, for simple scenes 75 percent of the total time is spent on calculating intersections between rays and objects. For more complex scenes the proportion goes as high as 95 percent. The time that must be spent calculating the intersections is directly related to the number of objects involved in the-scene".
+
+위의 후지모토의 말을 인용하자면, 간단한 scene에서의 ray tracing은 전체 소요 시간의 75%가 ray와 object들 사이의 intersection test에 할애된다. 
+더 복잡한 scene에서는 95% 까지도 차지한다. 그러므로, ray tracing의 속도를 개선하기 위해서는 intersection test의 수를 가능한 줄이는 것이 좋은데
+이를 위해서 필요한게 `Acceleration Structure` 이다. 
+
+teapot의 예를 들어 설명하자면, teapot의 32개의 `Bezier patches`를 각각 tight하게 감싸는 bounding box를 생성하여 teapot의 
+모든 vertices에 대해 intersection tests 하는게 아닌, bounding box들에 대해서 먼저 intersection tests를 하고 hit 했을 경우에만 
+ray와 교차한 bounding box에 포함된 vertices에 intersection tests를 한번 더 한다. 
+
+![Teapot bounding volume](https://snowapril.github.io/assets/img/post_img/2020-12-26-bounding-volume.gif)
+
+이런 간단한 아이디어에서 비롯한 결과물은 bounding volume을 도입하기 전과 후에 이론적으로 38배까지 속도 향상이 가능하다.
+
+
+
 ---
 ### reference
-1. ![https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F68a9ee3b-550c-41c7-90aa-589bd76c73de%2FUntitled.png?table=block&id=4d3b0cf1-8e4a-4a13-806a-756d4586ddb6&width=3070&userId=68fbb75e-8f7a-4af4-ba3b-0eb97516ef61&cache=v2](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F68a9ee3b-550c-41c7-90aa-589bd76c73de%2FUntitled.png?table=block&id=4d3b0cf1-8e4a-4a13-806a-756d4586ddb6&width=3070&userId=68fbb75e-8f7a-4af4-ba3b-0eb97516ef61&cache=v2)
-2. ![https://www.scratchapixel.com/lessons/advanced-rendering/introduction-acceleration-structure/introduction](https://www.scratchapixel.com/lessons/advanced-rendering/introduction-acceleration-structure/introduction)
+1. [https://twitter.com/hb3p8/status/557431407350665218?s=20](https://twitter.com/hb3p8/status/557431407350665218?s=20)
+2. [https://www.scratchapixel.com/lessons/advanced-rendering/introduction-acceleration-structure/introduction](https://www.scratchapixel.com/lessons/advanced-rendering/introduction-acceleration-structure/introduction)
