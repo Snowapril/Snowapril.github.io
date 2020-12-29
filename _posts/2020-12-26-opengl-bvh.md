@@ -40,7 +40,14 @@ ray와 교차한 bounding box에 포함된 vertices에 intersection tests를 한
 
 이런 간단한 아이디어에서 비롯한 결과물은 bounding volume을 도입하기 전과 후에 이론적으로 38배까지 속도 향상이 가능하다.
 
+구현이 간단한만큼 단점도 존재하는데, 이와 같은 기법은 bounding volume을 추적하는게 object 자체를 ray-tracing 하는 것보다 빠를 경우에만 유효하다.
+또한, loosely tight한 bounding-box으로 인해 intersecion test를 통과한 bounding-box 안에서 object에 대한 intersection test는 miss인 경우가 많다.
+![Teapot bounding box tight](https://snowapril.github.io/assets/img/post_img/2020-12-26-bbox-tight.png)
 
+이러한 단점들을 극복하기 위해 1986년 Kay와 Kajiya는 새로운 bounding-volume 생성 알고리즘을 고안했는데 그 내용은 아래와 같다.
+
+![BVH Projection](https://snowapril.github.io/assets/img/post_img/2020-12-26-bvh-projection.png)
+object의 vertices들 중 하나를 `P(x,y,z)` 라고 했을 때, normal vector가 (A, B, C)인 평면의 방정식 Ax + By + Cd + d = 0
 
 ---
 ### reference
