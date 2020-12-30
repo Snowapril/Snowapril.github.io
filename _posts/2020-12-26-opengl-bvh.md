@@ -49,6 +49,8 @@ ray와 교차한 bounding box에 포함된 vertices에 intersection tests를 한
 ![BVH Projection](https://snowapril.github.io/assets/img/post_img/2020-12-26-bvh-projection.png)
 object의 vertices들 중 하나를 `P(x,y,z)` 라고 했을 때, normal vector가 (A, B, C)인 평면의 방정식 Ax + By + Cd + d = 0
 
+$$ x = y^2 $$
+
 ---
 ### reference
 1. [https://twitter.com/hb3p8/status/557431407350665218?s=20](https://twitter.com/hb3p8/status/557431407350665218?s=20)
