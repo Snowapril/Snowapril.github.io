@@ -69,22 +69,21 @@ float unsharpmaskingValue(
 }
 ```
 
----
-
 코드만 보면 대충, 주어진 texture coordinate의 주변 pixel들의 AO를 계산해서 depth의 변화가 있는 부분을 강조하는 듯한 느낌이다.
+
+---
 
 Unsharp Mask란 이름과 반대로 이미지를 sharpening 할 때 사용하는 기법이다. texture 와 detail을 강조하고 싶을 때 사용하는 것이 sharpening으로, Unsharp Mask는 흔히 사용되는 sharpening의 기법이다.
 
 Unsharp mask는 크게 두가지 step으로 나뉜다. 
-1. Create Unsharp Mask
+### 1. Create Unsharp Mask
 주어진 Texture의 blurred된 버전을 생성하여 원본에서 빼주게 되면 Edge detection이 가능하다. 
 아무래도 edge 근처에서 pixel color의 값 변화가 급격하게 일어나므로 가능한 것 같다.
-2. High Contrast Original Image 와 Unsharp Mask 그리고 Original Image를 더해준다.
-
+### 2. High Contrast Original Image 와 Unsharp Mask 그리고 Original Image를 더해준다.
 ![Unsharp Mask](https://snowapril.github.io/assets/img/post_img/unsharp_mask.png)  
 `STEP2`는 higher 3개의 이미지를 mask-overlay를 이용해 합친다.
 
-Texture의 resolution은 변하지 않는데 어떻게 Final image가 sharpening 된건가?
+Texture의 resolution은 변하지 않는데 어떻게 final image가 sharpening 된걸까?
 ![Unsharp Mask Graph](https://snowapril.github.io/assets/img/post_img/unsharp_mask_graph.png)  
 Edge를 Ideal step으로 transformation 한게 아니라, transition의 light 부분과 dark 부분을 과장하여 
 표현함으로서 acutance(첨예도?)를 높여 sharpening 한다.
@@ -105,7 +104,7 @@ Unsharp Mask를 사용할 때엔 세가지 parameter에 대해서 이해해야 �
 
 물론, 아무렇게나 적용한다고 visually correct하진 않다. visual artifact를 발생시키는 경우가 있는데, 
 light와 dark의 over/undershoot을 많이하여 너무 sharpening을 많이하거나, 
-Red object와 Gray background의 Image의 경우가 대표적이다. 자세한건 아래 [1](https://www.cambridgeincolour.com/tutorials/unsharp-mask.htm)링크를 참조하자.
+Red object와 Gray background인 Image의 경우가 대표적이다. 자세한건 아래 [1](https://www.cambridgeincolour.com/tutorials/unsharp-mask.htm)링크를 참조하자.
 
 ---
 
@@ -116,12 +115,18 @@ Depth buffer에 unsharp mask를 적용하게 되면 우리는 추가적인 seman
 scene의 object들 사이 spatial relation을 알 수 있다. 
 
 예를들어, Blue background 앞에 있는 Blue object에 Unsharp mask를 이용해 Local contrast enhancement를 하면
-color contrast의 결핍으로 이미지가 변하지 않지만, Depth buffer를 이용한 technique은 추가적은 depth information으로
-color altering이 가능하다.
+color contrast의 결핍으로 이미지가 변하지 않지만, Depth buffer를 이용한 technique은 추가적인 
+depth information(spatial relation)으로 color altering이 가능하다.
 
+아래 그림은 ![AttributeVertexClouds](https://github.com/snowapril/AttributeVertexClouds)의 
+Unsharp masking을 적용하기 전과 적용 후 비교샷이다.
 
+<p float="left">
+  <img src="https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-before.png" width="100" />
+  <img src="https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-after.png" width="100" />
+</p>
 
 ---
 ### Reference
 1. [https://www.cambridgeincolour.com/tutorials/unsharp-mask.htm](https://www.cambridgeincolour.com/tutorials/unsharp-mask.htm)
-2. Luft, T., Colditz, C., and Deussen, O. 2006. Image enhancement by unsharp  masking the depth buffer. ACM Trans. Graph. 25, 3, 1206–1213.
+2. ![Luft, T., Colditz, C., and Deussen, O. 2006. Image enhancement by unsharp  masking the depth buffer. ACM Trans. Graph. 25, 3, 1206–1213.](https://dl.acm.org/doi/10.1145/1141911.1142016)
