@@ -121,11 +121,9 @@ depth information(spatial relation)으로 color altering이 가능하다.
 아래 그림은 ![AttributeVertexClouds](https://github.com/snowapril/AttributeVertexClouds)의 
 Unsharp masking을 적용하기 전과 적용 후 비교샷이다.
 
-<p float="left">
-  <img src="https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-before.png" width="100" />
-  <img src="https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-after.png" width="100" />
-</p>
-
+| ![Before](https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-before.png)  | ![After](https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-after.png) |
+|:---:|:---:|
+| **Before** | **After** |
 ---
 ### Reference
 1. [https://www.cambridgeincolour.com/tutorials/unsharp-mask.htm](https://www.cambridgeincolour.com/tutorials/unsharp-mask.htm)
