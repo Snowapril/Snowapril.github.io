@@ -118,12 +118,11 @@ scene의 object들 사이 spatial relation을 알 수 있다.
 color contrast의 결핍으로 이미지가 변하지 않지만, Depth buffer를 이용한 technique은 추가적인 
 depth information(spatial relation)으로 color altering이 가능하다.
 
-아래 그림은 ![AttributeVertexClouds](https://github.com/snowapril/AttributeVertexClouds)의 
+아래 그림은 [AttributeVertexClouds](https://github.com/snowapril/AttributeVertexClouds)의 
 Unsharp masking을 적용하기 전과 적용 후 비교샷이다.
 
-| ![Before](https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-before.png)  | ![After](https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-after.png) |
-|:---:|:---:|
-| **Before** | **After** |
+![Before](https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-before.png)![After](https://snowapril.github.io/assets/img/post_img/2021-03-09-unsharp-masking-after.png)
+
 ---
 ### Reference
 1. [https://www.cambridgeincolour.com/tutorials/unsharp-mask.htm](https://www.cambridgeincolour.com/tutorials/unsharp-mask.htm)
