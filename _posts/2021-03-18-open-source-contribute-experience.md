@@ -9,8 +9,7 @@ comments: true
 
 오늘은 Github 오픈소스에 처음으로 제대로 된 contribution을 하게 되어 그 경험을 이야기하려고 합니다.
 
-요즘 XR에 대한 관심이 많아지면서 Khronos group의 OpenXR에 대한 Webinar 영상을 보게되었는데,
-
+요즘 XR에 대한 관심이 많아지면서 Khronos group의 OpenXR에 대한 Webinar 영상을 보게되었는데 <br>
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7eLQXMpwzsQ?start=1532" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
