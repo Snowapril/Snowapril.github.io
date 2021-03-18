@@ -11,6 +11,7 @@ comments: true
 
 요즘 XR에 대한 관심이 많아지면서 Khronos group의 OpenXR에 대한 Webinar 영상을 보게되었는데,
 
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7eLQXMpwzsQ?start=1532" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 영상의 중간쯤에 Steve Winston이라는 분께서 openxr의 sample code를 설명하며 시연을 하는 부분이 있다.
