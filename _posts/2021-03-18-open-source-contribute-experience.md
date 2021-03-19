@@ -29,5 +29,5 @@ OpenXR Demo에 대한 github link와 build 하는 방법 등을 설명해놓으�
 더 자세하게는 [Pull-Request](https://github.com/Holochip-Public/OpenXRSamples/pull/2)를 확인해보는게 좋을 것 같다.
 
 window msvc에서 동작하게끔 위의 사항들을 수정하여 sample을 돌려봤는데 매우 정상적으로 동작했다.
-이러한 경험을 그냥 묻고 지나가기 보다는 sample demo repository에 window msvc support로 
-pull-request를 올려보면 좋을 것 같다는 생각이 들어 해보았고, 2~3일만에 approve되어 main에 병합되었다.
+이러한 경험을 그냥 묻고 지나가기 보다는 repository에 window msvc support로 
+pull-request를 올려보면 좋을 것 같다는 생각이 들어 해보았고, 2~3일만에 approv되어 main에 병합되었다.
