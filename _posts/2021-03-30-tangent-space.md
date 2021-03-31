@@ -7,8 +7,6 @@ tags: tangent-space graphics linear-algebra
 comments: true  
 ---
 
-# Tangent Space
-
 Advanced shading techniques are bale to make use of texture maps that store finely detailed geometric information. 
 
 ![https://snowapril.github.io/assets/img/post_img/tangent_space_post.png](https://snowapril.github.io/assets/img/post_img/tangent_space_post.png)
