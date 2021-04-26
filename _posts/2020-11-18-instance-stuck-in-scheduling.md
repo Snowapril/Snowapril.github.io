@@ -2,7 +2,7 @@
 layout: post
 title:  "OpenStack Instance stuck in Scheduling"
 date:   2020-11-18 19:59:27 +0900
-categories: openstack
+categories: cloud-computing
 tags: devstack openstack single-node undercloud ubuntu googlecloud gce nova
 comments: true  
 ---

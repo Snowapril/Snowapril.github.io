@@ -2,7 +2,7 @@
 layout: post
 title:  "OpenGL Segmentation Fault [Solved]"
 date:   2020-04-04 20:38:27 +0900
-categories: dev-issue
+categories: real-time-rendering
 tags: opengl debug gdb backtrace
 comments: true  
 ---

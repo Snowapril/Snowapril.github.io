@@ -2,7 +2,7 @@
 layout: post
 title:  "OpenGL Postprocessing quad vertices input trick"
 date:   2021-03-08 14:38:27 +0900
-categories: opengl
+categories: real-time-rendering
 tags: opengl post-processing quad trick glsl
 comments: true  
 ---

@@ -2,8 +2,8 @@
 layout: post
 title:  "Visual Studio Runtime Library Option(/MT, /MD)"
 date:   2020-12-17 21:55:27 +0900
-categories: cpp
-tags: c c++ visualstudio runtime-library
+categories: language
+tags: c cpp visualstudio runtime-library
 comments: true  
 ---
 

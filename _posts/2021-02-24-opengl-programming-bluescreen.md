@@ -2,7 +2,7 @@
 layout: post
 title:  "During opengl programming, Bluescreen popped up because of Out of memory"
 date:   2021-02-24 14:38:27 +0900
-categories: opengl
+categories: real-time-rendering
 tags: opengl bluescreen window10 ouf-of-memory nvidia dram
 comments: true  
 ---

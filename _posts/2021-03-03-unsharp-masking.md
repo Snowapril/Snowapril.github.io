@@ -2,7 +2,7 @@
 layout: post
 title:  "OpenGL Unsharp Masking in framgment shader"
 date:   2021-03-03 14:38:27 +0900
-categories: opengl
+categories: real-time-rendering
 tags: opengl image-processing glsl unsharp-mask filter
 comments: true  
 ---

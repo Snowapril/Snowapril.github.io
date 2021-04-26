@@ -2,7 +2,7 @@
 layout: post
 title:  "Devstack을 이용한 OpenStack 환경 구축"
 date:   2020-10-03 19:15:27 +0900
-categories: openstack
+categories: cloud-computing
 tags: devstack openstack single-node undercloud ubuntu googlecloud gce
 comments: true  
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Cinder Volume Service state down 해결하기"
 date:   2020-10-03 19:25:27 +0900
-categories: openstack
+categories: cloud-computing
 tags: devstack openstack single-node undercloud ubuntu googlecloud gce cinder
 comments: true  
 ---

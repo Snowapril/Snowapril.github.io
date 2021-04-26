@@ -2,7 +2,7 @@
 layout: post
 title:  "Contribution on OpenXR Sample app with Window support"
 date:   2021-03-18 14:38:27 +0900
-categories: openxr
+categories: real-time-rendering
 tags: vulkan openxr ar opensource contribute window cross-platform msvc
 comments: true  
 ---

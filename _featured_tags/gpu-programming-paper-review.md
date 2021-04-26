@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
 title: Paper Review
-slug: gpu-programming-paper-review
+slug: paper-review
 category: gpu-programming
 menu: false
 order: 1

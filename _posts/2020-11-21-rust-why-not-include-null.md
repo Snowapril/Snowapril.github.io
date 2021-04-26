@@ -2,8 +2,8 @@
 layout: post
 title:  "Rust가 Null을 도입하지 않은 이유"
 date:   2020-11-21 20:38:27 +0900
-categories: rust
-tags: rust c++ reference null
+categories: language
+tags: rust reference null
 comments: true  
 ---
 Rust에는 다른 Programming 언어들이 가지는 Null 이라는 기능이 없다.

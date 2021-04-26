@@ -2,7 +2,7 @@
 layout: post
 title:  "CLI 환경에서의 OpenGL Debugger"
 date:   2020-03-25 20:38:27 +0900
-categories: opengl
+categories: real-time-rendering
 tags: opengl cli debugger apitrace headerless
 comments: true  
 ---

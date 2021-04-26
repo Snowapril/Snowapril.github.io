@@ -2,8 +2,8 @@
 layout: post
 title:  "About C++ name mangling"
 date:   2020-12-11 21:38:27 +0900
-categories: cpp
-tags: c c++ abi name-mangling
+categories: language
+tags: c cpp c++ abi name-mangling
 comments: true  
 ---
 
