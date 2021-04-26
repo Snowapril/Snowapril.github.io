@@ -18,7 +18,7 @@ comments: true
 - MMU(memory management unit) chip의 일부분
 - virtual-to-physical address translation을 위한 HW cache
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled.png)
 
 ### TLB Organization
 
@@ -32,7 +32,7 @@ TLB는 hardware상에서 구현되어 있음
 
 ### Address Translation with TLB
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%201.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%201.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%201.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%201.png)
 
 ```cpp
 VPN = (VirtualAddress & VPN_MASK) >> VPN_SHIFT;
@@ -56,7 +56,7 @@ if (Success) { //When TLB Hit
 
 ### Accessing an array example)
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%202.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%202.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%202.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%202.png)
 
 - VPN이 0~15까지 있으니 VPN은 $2^4$이고, page table에는 16개의 PTE가 존재함
 - offset이 $2^4$이니, page의 크기가 16byte이다.
@@ -66,11 +66,11 @@ if (Success) { //When TLB Hit
 
 - Temporal Locality : 최근에 access 했던 instruction 또는 data item이 가까운 미래에 다시 access할 가능성이 높음
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%203.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%203.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%203.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%203.png)
 
 - Spatial Locality : 만약 program이 address x에 access했다면, 곧 x와 가까운 memory에 access할 가능성이 크다.
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%204.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%204.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%204.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%204.png)
 
 ### Who handles the TLB Miss?
 
@@ -104,13 +104,13 @@ if (Success) {
 
 ### TLB Issue : Context switching
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%205.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%205.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%205.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%205.png)
 
 Context switch마다 TLB를 flushing하는 것은 cost가 너무 높다
 
 ### To solve problem : address space identifier(ASID)
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%206.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%206.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%206.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%206.png)
 
 ### Another issue : share a page
 
@@ -118,7 +118,7 @@ Prcess 1과 Process2가 physical page 101을 공유할 때,
 
 P1은 이 page를 10번 VPN에, P2는 50번 VPN에 저장할 수 있다
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%207.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%207.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%207.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%207.png)
 
 Page공유도 간단함
 
@@ -129,7 +129,7 @@ LRU(Least recently used)
 - 최근에 쓰지 않은 entry를 evict해버림
 - LRU로 memory reference stream에서 localiy의 장점을 최대한 이용함
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%208.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%208.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%208.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%208.png)
 
 - 총 11번의 TLB Miss
 
@@ -144,7 +144,7 @@ LRU(Least recently used)
 - **TLB friendly하게 algorithm과 data structure를 작성하는게 매우 중요**
 ⇒ TLB hit를 최대한 많이
 
-![09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%209.png](09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%209.png)
+![https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%209.png](https://snowapril.github.io/assets/img/post_img/09-Translation%20Lookaside%20Buffers(TLBs)%2017548a69cc5345a9a2af72851107c196/Untitled%209.png)
 
 ### Summary
 

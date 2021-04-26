@@ -9,7 +9,7 @@ comments: true
 
 ### Inefficiency of base and bound approach
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled.png)
 
 - address space 내부에 **Big chunk of "free" space**
 - "free" space가 physical memory도 차지함
@@ -27,9 +27,9 @@ comments: true
 
 ### Placing segment in physical memory
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%201.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%201.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%201.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%201.png)
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%202.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%202.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%202.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%202.png)
 
 - Physical address = offset + base register address
 ⇒ segment 방식에서는 address space에서의 virtual address가 아니고, **각 segment의 시작지점에서의 offset을 사용함**
@@ -37,20 +37,20 @@ comments: true
 
 ### Address translation on segmentation
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%203.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%203.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%203.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%203.png)
 
 - virtual address 100의 offset은 100이다
 ⇒ virtual address 100은 code segment에 속하므로, offset도 100임
 ⇒ virtual address 100의 physical address는 32KB + 100 = 32868
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%204.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%204.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%204.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%204.png)
 
 - virtual address 4200의 offset은 4200 - 4KB = 104 이다
 ⇒ virtual address 4200의 physical address는 34KB + 104 = 34920
 
 ### Segmentation fault or violiation
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%205.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%205.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%205.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%205.png)
 
 - 만약 위의 상황에서 heap의 end보다 큰 7KB 같은 illegal address를 reference하면, OS가 segmentation fault를 발생시킨다
 ⇒ hardware detects that address is **out of bounds**
@@ -59,12 +59,12 @@ comments: true
 
 - Explicit approach : virtual address의 상위 몇 bits로 address space를 segments로 chop-up 한다
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%206.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%206.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%206.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%206.png)
 
 example ) virtual address 4200  = (01000001101000)
 ⇒ segment bits : 01 == heap, offset인 1101000을 heap의 base register에서 더함
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%207.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%207.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%207.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%207.png)
 
 ```cpp
 // get top 2 bits of 14-bit virtual address
@@ -85,7 +85,7 @@ else
     - hardware가 segment가 어느 방향으로 자라는지 체크함
     ⇒ 1이면 positive direction, 0이면 negative direction
 
-    ![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%208.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%208.png)
+    ![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%208.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%208.png)
 
 위의 segment register table로 virtual address 15KB를 referring 할 때,
 ⇒ 11110000000000, segment bit : 11, offset bit : 110000000000 = 3KB
@@ -102,7 +102,7 @@ else
 - sharing을 위해서는 protection bits를 위해 extra hardware support 필요
     - 몇몇 bits를 더 추가해서, permission (read,write,execute) 표시
 
-    ![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%209.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%209.png)
+    ![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%209.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%209.png)
 
 ### Find grained and Coarse grained
 
@@ -123,7 +123,7 @@ else
     ⇒ 2) Copy data to somewhere
     ⇒ 3) Change segment register value
 
-    ![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%2010.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%2010.png)
+    ![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%2010.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%2010.png)
 
 ### Segmentation의 Pros & Cons
 
@@ -147,4 +147,4 @@ Cons
 ⇒ 만약 한 logical segment에서 large하지만 sparsely-used heap인 경우, 실제로 사용되는 메모리는 일부분이지만 전체 heap이 메모리에 모두 올라와있어야 한다는 것이 비효율적이다
 ⇒ ex) 전화번호부 프로그램의 경우, 모든 전화번호를 malloc()으로 할당했는데 실제 사용되는 전화번호가 몇개밖에 안되면 굉장히 비효율적
 
-![07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%2011.png](07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%2011.png)
+![07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%2011.png](07-Segmentation%https://snowapril.github.io/assets/img/post_img/07-Segmentation%20d44a82ab894a4603bc8dce2df8f143a9/Untitled%2011.png)

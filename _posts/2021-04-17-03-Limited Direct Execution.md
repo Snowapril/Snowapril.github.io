@@ -11,7 +11,7 @@ comments: true
 
 그냥 program을 CPU 위에서 direct하게 수행함
 
-![03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled.png](03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled.png)
+![https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled.png](https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled.png)
 
 running program에 제한이 없으면 OS는 anything에 대한 control이 없음. 그냥 library가 되는거임
 
@@ -43,7 +43,7 @@ kernel이 특정한 functionality를 uesr program에게 조심스럽게 노출�
 - trap을 호출한 user program으로 return 함
 - privilege level을 다시 user mode로 격하시킴
 
-![03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%201.png](03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%201.png)
+![https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%201.png](https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%201.png)
 
 trap은 OS 내부에서 어떤 코드가 수행될지 어케알까
 
@@ -57,9 +57,9 @@ trap은 OS 내부에서 어떤 코드가 수행될지 어케알까
 
 ### Limited Direction Execution Protocol
 
-![03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%202.png](03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%202.png)
+![https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%202.png](https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%202.png)
 
-![03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%203.png](03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%203.png)
+![https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%203.png](https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%203.png)
 
 Direct execution에서 uesr mode와 kernel mode로 제한을 둬 Limited direct execution
 
@@ -104,13 +104,13 @@ Context-switch는 매우 빈번하게 일어나므로 overhead를 줄이기 위�
 - Kernel stack에 곧 실행될 process의 registers 를 **Restore**함
 - 곧 실행될 Processs를 위해 Kernel stack으로 switching 됨
 
-![03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%204.png](03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%204.png)
+![https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%204.png](https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%204.png)
 
 ### Limited Direction Execution Protocol (With Timer interrupt)
 
-![03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%205.png](03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%205.png)
+![https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%205.png](https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%205.png)
 
-![03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%206.png](03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%206.png)
+![https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%206.png](https://snowapril.github.io/assets/img/post_img/03-Limited%20Direct%20Execution%20649153b885da45b4824dab9eb67f15f7/Untitled%206.png)
 
 ### Concurrency에 대한 걱정
 

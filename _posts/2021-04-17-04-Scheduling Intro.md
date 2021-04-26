@@ -11,7 +11,7 @@ comments: true
 
 runnable processes에서 다음에 실행할 process를 결정하는 **Policy**
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled.png)
 
 ### Basic approaches
 
@@ -57,7 +57,7 @@ Frist come, First served (FCFS)
 - 비선점형(Non-preemptive)
 - Job들이 공평하게(Fairness) 다뤄짐 : **no starvation**
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%201.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%201.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%201.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%201.png)
 
  Average turnaround time = $[(10-0)+(20-0)+(30-0)]/3=20sec$
 
@@ -65,7 +65,7 @@ Frist come, First served (FCFS)
 
 **Convoy effect** : 실행시간이 짧은 process들이 긴 process의 종료를 마냥 기다리는 현상
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%202.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%202.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%202.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%202.png)
 
  Average turnaround time = $[(100-0)+(110-0)+(120-0)]/3=110sec$
 
@@ -75,13 +75,13 @@ assumption (1), 각 Job들이 동일한 시간만큼 수행된다는 가정 완�
 
 Non-preemptive scheduler임
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%203.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%203.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%203.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%203.png)
 
 Average turnaround time = $[(10-0)+(20-0)+(120-0)]/3=50sec$
 
 **assumption(2), 각 job들이 동시에 도착한다는 가정을 완화하면,**
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%204.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%204.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%204.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%204.png)
 
 Average turnaround time = $[(100-0)+(110-10)+(120-10)]/3=103.33sec$
 
@@ -98,7 +98,7 @@ Average turnaround time = $[(100-0)+(110-10)+(120-10)]/3=103.33sec$
 
 - remaning jobs과 new job 중에 남은 실행시간이 짧은걸 선택
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%205.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%205.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%205.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%205.png)
 
 Average turnaround time = $[(120-0)+(20-10)+(30-10)]/3=50sec$
 
@@ -119,13 +119,13 @@ $T_{response}=T_{firstrun}-T_{arrival}$
 - Preemptive, No starvation
 - **RR은 fairness(good at response time)이지만, performance(turnaround time)은 대게 안좋음**
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%206.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%206.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%206.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%206.png)
 
 $T_{averageturnaroundtime}=[(5-0)+(10-0)+(15-0)]/3 =10sec$
 
 $T_{average response}=[(0-0)+(5-0)+(10-0)]/3 =5sec$
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%207.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%207.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%207.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%207.png)
 
 $T_{averageturnaroundtime}=[(13-0)+(14-0)+(15-0)]/3 =14sec$
 
@@ -148,11 +148,11 @@ Longer time slice
 
 assumption(4) 을 완화해서 모든 program이 I/O를 수행한다고 하자
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%208.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%208.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%208.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%208.png)
 
 이렇게 Job을 분할해서 CPU를 할당하는 것 보다는 아래처럼
 
-![04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%209.png](04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%209.png)
+![https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%209.png](https://snowapril.github.io/assets/img/post_img/04-Scheduling%20Intro%203ba9c2ac1b4641afb10edd727ee7ab56/Untitled%209.png)
 
 B가 I/O를 수행할 때는 다른 Job에게 CPU 제어권을 넘기는게 더욱 효율적임
 

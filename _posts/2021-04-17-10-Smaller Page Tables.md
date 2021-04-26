@@ -22,9 +22,9 @@ page size를 크게 하니 결과적으로 page table 크기는 줄었지만, **
 
 ### Problem
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled.png)
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%201.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%201.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%201.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%201.png)
 
 전체 virtual address space에서 **대부분의 Virtual address는 UNUSED 공간**임에도 통째로 page table로 만드니 낭비가 너무 큼  
 
@@ -45,7 +45,7 @@ Paging
 
 ### Simple example for hybrid approach
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%202.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%202.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%202.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%202.png)
 
 ### TLB Miss on Hybrid approach
 
@@ -69,15 +69,15 @@ PTEAddr = Base[SN] + sizeof(PTE) * VPN;
     - 만약 page-table entries의 모든 page가 invalid하다면, 그 page에 대한 page table은 할당하지 않는다
     - page-table의 page가 valid 하다면, 새로운 구조체, **page directory**를 사용함
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%203.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%203.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%203.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%203.png)
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%204.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%204.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%204.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%204.png)
 
 ### Multi-level Page Tables : Page Directory entries
 
 Page directory는 page-table의 page마다 하나의 page directory entry를 가진다
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%205.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%205.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%205.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%205.png)
 
 - PDE는 valid bit와 PFN을 가진다.
 
@@ -112,29 +112,29 @@ Cons
 ⇒ page의 크기가 64byte이므로, $2^{10}/2^6=2^4$로, Page마다 16개의 PTE를 가질 수 있음 : VPN으로 4bit가 필요하다
 - page-directory entry가 invalid하면 raise exception
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%206.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%206.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%206.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%206.png)
 
 만약 PDE가 valid 하다면, 이 PDE가 가리키는 page table의 page에서 PTE를 fetch 해봐야함. 즉, 위의 그림에서 PDE가 valid하면 그 PDE의 PFN으로 page table에 가서 VPN의 하위 4bit로 indexing하고 offset을 적용한다.
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%207.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%207.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%207.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%207.png)
 
 ### More than two level
 
 좀더 deep한 tree를 구성하는 것도 가능하다
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%208.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%208.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%208.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%208.png)
 
 - Virtual address 30 bit
 - VPN : 21bit ⇒ $2^{21}$개의 page, PTE
 - offset : 9bit ⇒ $2^9$byte = 512byte page size
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%209.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%209.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%209.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%209.png)
 
 - PTE size를 4byte라고 가정하면, page size가 512 byte이므로, page마다 128개의 PTE가 존재함. 이를 indexing 하기 위한 VPN이 7bit 필요
 - Page directory index가 14bit로, $2^{14}$개의 entry를 가지는데, PDE가 4byte라고 하더라도 $2^{16}$이고, 이는 page size 512byte에 다 못들어감
 - 이걸 해결하기 위해서 tree의 level을 한단계 더 deep 하게 들어감
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%2010.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%2010.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%2010.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%2010.png)
 
 ### Multi-level page table control flow
 
@@ -182,7 +182,7 @@ Pros & Cons
 - page table을 저장하는데 필요한 memory를 극적으로 줄일 수 있다
 - TLB Miss 일 때 inverted page table을 전체 다봐야해서 시간이 늘어남
 
-![10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%2011.png](10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%2011.png)
+![https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%2011.png](https://snowapril.github.io/assets/img/post_img/10-Smaller%20Page%20Tables%20032cb87b951f41cdadd8768ee391ecda/Untitled%2011.png)
 
 ### Summary
 

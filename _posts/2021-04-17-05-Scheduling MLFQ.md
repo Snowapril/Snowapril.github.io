@@ -27,7 +27,7 @@ MLFQ는 몇개의 distinct한 queue를 가짐
 
 - 각 Queue는 다른 priority level을 가짐
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled.png)
 
 ready to run인 job이 single queue에 있을 때
 
@@ -52,7 +52,7 @@ CPU-intensive jobs
 - response time은 별로 신경 안씀
 - **Reduce its priority**
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%201.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%201.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%201.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%201.png)
 
 ### MLFQ : How to change priority
 
@@ -66,15 +66,15 @@ MLFQ Priority adjustment algorithm:
 
 ### Ex1) Single long-running job
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%202.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%202.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%202.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%202.png)
 
 ### Ex2) Long running CPU-intensive job and Short interactive job
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%203.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%203.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%203.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%203.png)
 
 ### Ex3) Long running CPU-intensive job과 I/O를 많이하는 Short interactive job
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%204.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%204.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%204.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%204.png)
 
 ### **Problems with basic MLFQ**
 
@@ -89,7 +89,7 @@ MLFQ Priority adjustment algorithm:
 
 - **Rule5) After some time period S, 모든 jobs을 system의 가장 높은 queue로 옮김**
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%205.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%205.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%205.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%205.png)
 
 Gaming of scheduler는 어떻게 방지할까?
 
@@ -97,14 +97,14 @@ Rule4a)와 Rule4b)를 합침 **Gaming tolerance**
 
 - Rule4) Job이 해당 Level에서의 time allotment를 다 쓰면 priority를 낮춤
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%206.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%206.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%206.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%206.png)
 
 ### Tuning MLFQ and other issues
 
 - Lower priority, Longer Quanta (priority마다 다른 time-slice 시간)
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%207.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%207.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%207.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%207.png)
 
 ### MLFQ : Summary
 
-![05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%208.png](05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%208.png)
+![https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%208.png](https://snowapril.github.io/assets/img/post_img/05-Scheduling%20MLFQ%20c4558ae88d794ef191e6119ec3b4becf/Untitled%208.png)

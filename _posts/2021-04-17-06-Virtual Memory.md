@@ -29,7 +29,7 @@ comments: true
 
 ### Multiprogramming and Time sharing
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled.png)
 
 - 이로 인해 protection issue가 중요해졌음
 ⇒ errant memory accesses from other processes
@@ -40,7 +40,7 @@ comments: true
     - address space는 running process에 대한 모든 정보를 보관
     - program code, heap, stack and etc 로 구성됨
 
-    ![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%201.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%201.png)
+    ![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%201.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%201.png)
 
 address space가 16KB == $2^{14}$byte
 ⇒ byte마다 번호를 매기기 위해서는 14개의 bit가 필요함
@@ -50,14 +50,14 @@ address space가 16KB == $2^{14}$byte
 - **Heap** : dynamically allocate memory(malloc, new)
 - **Stack** : store return addresses or values, local variables, arguments
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%202.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%202.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%202.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%202.png)
 
 ### Virtual address
 
 process에 있는 모든 address는 **virtual** 
 ⇒ OS가 virtual address를 physical address를 변환해줌
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%203.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%203.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%203.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%203.png)
 
 ### Memory virtualizing with efficiency and control
 
@@ -76,13 +76,13 @@ process에 있는 모든 address는 **virtual**
 
 ### Address transliation 예제
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%204.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%204.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%204.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%204.png)
 
 x = x + 3이 아래의 세 assembly code로 변환됨
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%205.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%205.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%205.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%205.png)
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%206.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%206.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%206.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%206.png)
 
 1. fetch instruction at address 128
 2. execute this instruction ⇒ load from address 15KB
@@ -99,7 +99,7 @@ OS는 process가 physical memory의 0 위치에 못올라오게 하는걸 원함
 
 ### A single relocated process
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%207.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%207.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%207.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%207.png)
 
 ### Static relocation
 
@@ -107,7 +107,7 @@ OS는 process가 physical memory의 0 위치에 못올라오게 하는걸 원함
 ⇒ OS가 program이 memory에 loading되기 전에 rewrites함
 ⇒ static data와 functions의 address를 바꿈
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%208.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%208.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%208.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%208.png)
 
 **Pros** 
 
@@ -132,24 +132,24 @@ Hardware-based relocation
 
 ### Base & Bounds register
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%209.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%209.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%209.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%209.png)
 
 ### Dynamic(hardware-based) relocation
 
 - program이 시작될 때, OS가 process를 physical memory의 어디에 load시킬지 결정함
     - **base register** 값 결정
 
-    ![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2010.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2010.png)
+    ![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2010.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2010.png)
 
     - 모든 virtual address는 **bound register**보다 크거나 음수아면 안됨
 
-    ![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2011.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2011.png)
+    ![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2011.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2011.png)
 
 ### Relocation and Address translation (by MMU)
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2012.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2012.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2012.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2012.png)
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2013.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2013.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2013.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2013.png)
 
 address 128의 instruction은 아래와 같이 변환됨
 ⇒ 128 + 32KB(base-register) = 1024 * 32 + 128
@@ -173,20 +173,20 @@ execute this instruction
 
 ### OS issues : When a process starting
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2014.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2014.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2014.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2014.png)
 
 - OS가 새로운 address space를 위해서 room을 찾아줘야함
 ⇒ **free list** : 사용중이지 않은 physical memory의 범위 list
 
 ### OS issues : When a process is terminated
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2015.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2015.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2015.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2015.png)
 
 - OS는 memory를 다시 free list로 넣어줘야함
 
 ### OS issues : When context switch occurs
 
-![06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2016.png](06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2016.png)
+![https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2016.png](https://snowapril.github.io/assets/img/post_img/06-Virtual%20Memory%209706154001414b829e00e641a976460d/Untitled%2016.png)
 
 OS가 base-and-bound pair를 save & restore 해줘야함 
 ⇒ process structure 또는 process control block (PCB) 안에 save&restore
