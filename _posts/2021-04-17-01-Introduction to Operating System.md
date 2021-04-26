@@ -14,7 +14,7 @@ Running program executes an instruction from memory
 3. **Execute** : add two numbers, access memory, check a condition etc..
 4. The processor moves on to the next instruction and so on
 
-![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled.png](01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled.png)
+![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled.png](https://snowapril.github.io/assets/img/post_img/01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled.png)
 
 ### Operating system (OS)
 
@@ -57,13 +57,13 @@ system은 매우 많은 수의 virtual CPU를 가짐
 - CPU 하나를 무한한 수의 CPU를 가진 것처럼 보이게 함
 - 많은 program이 동시에 실행되고 있는 것처럼 보이게 함
 
-![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%201.png](01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%201.png)
+![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%201.png](https://snowapril.github.io/assets/img/post_img/01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%201.png)
 
 Application들이 자기만의 고유한 CPU를 가지고 있는 것처럼 보이게함
 
-![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%202.png](01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%202.png)
+![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%202.png](https://snowapril.github.io/assets/img/post_img/01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%202.png)
 
-![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%203.png](01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%203.png)
+![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%203.png](https://snowapril.github.io/assets/img/post_img/01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%203.png)
 
 processor가 하나밖에 없지만, 4개의 program이 동시에 실행되는 것처럼 보임
 
@@ -78,9 +78,9 @@ program은 모든 자료구조를 memory에 보관함
 - Write memory(store)
 ⇒ data와 data를 쓸 address를 명시함
 
-![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%204.png](01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%204.png)
+![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%204.png](https://snowapril.github.io/assets/img/post_img/01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%204.png)
 
-![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%205.png](01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%205.png)
+![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%205.png](https://snowapril.github.io/assets/img/post_img/01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%205.png)
 
 각 process는 자기의 고유한 virtual address space에 access함
 
@@ -88,7 +88,7 @@ program은 모든 자료구조를 memory에 보관함
 
 OS는 많은 일을 한번에 수행함
 
-![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%206.png](01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%206.png)
+![01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%206.png](https://snowapril.github.io/assets/img/post_img/01-Introduction%20to%20Operating%20System%206791cdd11eb24c8f89bea270fb4a6a38/Untitled%206.png)
 
 shared counter 변수를 증가시키는 건 아래 3개의 instruction으로 구성
 
