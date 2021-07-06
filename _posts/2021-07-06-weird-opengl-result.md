@@ -53,15 +53,12 @@ Skydome class는 environment map image에서 BRDR lookup table, irradiance map, 
 코드를 하나하나 보니 opengl resource 할당/해제에서 실수가 있었다.
 
 ```c++
-auto timerStart = std::chrono::high_resolution_clock::now();
-		//! Create framebuffer for capturing
-		GLuint fbo, rbo;
-		glCreateFramebuffers(1, &fbo);
-
-    //! ...
-    
-		glDeleteRenderbuffers(1, &rbo);
-		glDeleteBuffers(1, &fbo);
+//! Create framebuffer for capturing
+GLuint fbo, rbo;
+glCreateFramebuffers(1, &fbo);
+//! ...
+glDeleteRenderbuffers(1, &rbo);
+glDeleteBuffers(1, &fbo);
 ```
 코드를 살펴보면 할당하지도 않은 render buffer object를 delete하고 있고,
 glCreateFramebuffers로 생성한 frame buffer object를 glDeleteFramebuffers가 아닌 glDeleteBuffers로 지우고 있다.
